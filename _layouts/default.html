@@ -68,7 +68,9 @@ layout: table_wrappers
       {% endif %}
     </nav>
   </div>
-  <div class="main" id="top">
+  <div class="main" id="top" style="min-height: 100vh;
+  display: flex;
+  flex-direction: column;">
         <!--div id="main-header" class="main-header">
           {% if site.search_enabled != false %}
             <div class="search">
@@ -195,7 +197,7 @@ layout: table_wrappers
     {% endif %}
 
   </div>
-  <footer class="main footer-16371 bg-light" style="position: sticky;left: 0;top: 0;width: auto!important;max-width: 100%!important;">
+  <footer class="main footer-16371 bg-light" style="position: relative;left: 0;bottom: 0;width: auto!important;max-width: 100%!important;">
   {% include foot.html %}
   </footer>
 </body>
