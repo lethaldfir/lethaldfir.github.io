@@ -1,0 +1,72 @@
+<!-- Related Posts
+================================================== -->
+<div class="{% unless page.categories == empty %} related-posts {% endunless %}">
+
+    {% unless page.categories == empty %}
+    <h2 class="text-center mb-4">Explore more like this</h2>
+    {% endunless %}
+
+    <div class="d-flex justify-content-center align-items-center flex-wrap">
+
+        <!-- Categories -->
+        {% assign sortedCategories = page.categories | sort %}
+        {% for category in sortedCategories %}
+        <h5 class="p-2">
+            <a class="smoothscroll text-dark text-decoration-none badge bg-warning text-capitalize mb-2" style="margin-top: 5px;"
+                href="{{site.baseurl}}/categories#{{ category | replace: " "," -" }}">{{ category }}</a>
+        </h5>
+        {% endfor %}
+
+        <!-- Tags -->
+        {% assign sortedTags = page.tags | sort %}
+        {% for tag in sortedTags %}
+        <h5>
+            <a class="smoothscroll text-white text-decoration-none badge bg-dark text-capitalize mb-2" style="margin-top: 5px;"
+                href="{{site.baseurl}}/tags#{{ tag | replace: " "," -" }}">{{ tag }}</a>
+        </h5>
+        {% endfor %}
+
+    </div>
+
+    {% assign maxRelated = 3 %}
+    {% assign minCommonTags = 1 %}
+    {% assign maxRelatedCounter = 0 %}
+    <div class="d-flex container justify-content-center align-items-center flex-wrap mb-5">
+        <!-- <div class="blog-grid-container"> -->
+        {% for post in site.posts %}
+
+        {% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+
+        {% for category in post.categories %}
+        {% if post.url != page.url %}
+        {% if page.categories contains category %}
+        {% assign sameTagCount = sameTagCount | plus: 1 %}
+        {% capture tagmarkup %} {{ category }} {% endcapture %}
+        {% assign commonTags = commonTags | append: tagmarkup %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+        {% if sameTagCount >= minCommonTags %}
+        {% include longcard.html content="25%" %}
+        {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+        {% if maxRelatedCounter >= maxRelated %}
+        {% break %}
+        {% endif %}
+        {% endif %}
+
+        {% endfor %}
+    </div>
+    {% assign sortedCategories = page.categories | sort %}
+    {% assign leastcatcount = 1 %}
+    {% assign cattotal = sortedCategories | size %}
+    {% if leastcatcount >= cattotal %}
+    <div class="d-flex container justify-content-center align-items-center flex-wrap recent-posts mb-5">
+            <!-- <h1>Recent Posts ( {{sortedCategories | size}} )</h1> -->
+            {% for post in site.posts offset:1 limit:3 %}
+                {% include longcard.html content="25%" %}
+            {% endfor %}
+    </div>  
+    {% endif %}
+</div>

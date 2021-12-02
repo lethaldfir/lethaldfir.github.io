@@ -1,0 +1,30 @@
+<nav id="breadcrumbs" aria-label="breadcrumb" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);">
+    
+    <!-- </nav> style="top: 16%; left: 4px;position: absolute;"> -->
+    <ul class="breadcrumb text-decoration-none" >
+        {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+        {% for crumb in crumbs offset: 1 %}
+            {% if forloop.last %}
+                <li class="breadcrumb-item active" style="inline-size: 220px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" aria-current="page">{{ page.title }}</li>
+            {% else %}
+                <li class="breadcrumb-item"><a class="text-decoration-none" href="{{ site.baseurl }}/{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{
+                    crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+  </nav>
+
+<!-- 
+<div id="breadcrumbs">
+    {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+    <a href="{{ site.baseurl }}/">Home</a>
+    {% for crumb in crumbs offset: 1 %}
+    {% if forloop.last %}
+    <i class="fas fa-angle-right"></i> {{ page.title }}
+    {% else %}
+    <i class="fas fa-angle-right"></i> <a
+        href="{{ site.baseurl }}/{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{
+        crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+    {% endif %}
+    {% endfor %}
+</div> -->

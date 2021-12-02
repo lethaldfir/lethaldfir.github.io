@@ -1,0 +1,41 @@
+---
+layout: original
+subtitle: Blog
+---
+<div class="mt-5 containse">
+    <!-- <div class="d-flex container justify-content-center align-items-center flex-wrap mt-5"> -->
+
+    {% for post in paginator.posts %}
+        {% include longcard.html content="100%" %}
+    {% endfor %}
+<!-- <p>{{paginator.total_pages}} | {{paginator.total_posts}} | {{paginator.per_page}}  </p> -->
+<!-- pagination -->
+<!-- pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination mb-5">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">← Prev</a>
+  {% else %}
+    <span>← Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="active">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next →</a>
+  {% else %}
+    <span>Next →</span>
+  {% endif %}
+</div>
+{% endif %}
+</div>
+
+{% include foot.html %}

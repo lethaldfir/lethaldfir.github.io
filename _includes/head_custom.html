@@ -1,0 +1,47 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.0/css/font-awesome.css" integrity="sha512-vTF66+NUFBh1RYzB09CzDYgbCeXhYpaBrydVaSAeYMjlRZ+unsPguBSioDFfMd8n2jYLijqhpJOAhEa0vdcUew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Plaster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+{% unless site.plugins contains "jekyll-seo-tag" %}
+      <title>{{ page.stitle }} - {{ site.title }}</title>
+  
+      {% if page.description %}
+        <meta name="Description" content="{{ page.description }}">
+      {% endif %}
+    {% endunless %}
+    <link rel="icon" href="{{ 'lock.svg' | relative_url }}" type="image/x-icon">
+
+  <!--
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
+  
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+  
+    {% if site.ga_tracking != nil %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+  
+        gtag('config', '{{ site.ga_tracking }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
+      </script>
+  
+    {% endif %}
+  
+
+    <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
+    -->
+    {% if site.search_enabled != false %}
+    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+  {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    {% seo %}
+  </head>
+  

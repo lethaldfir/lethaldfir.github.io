@@ -1,0 +1,39 @@
+---
+layout: original
+title: 404
+permalink: /404
+nav_exclude: true
+search_exclude: true
+---
+<style>
+    .error-pag a {
+    font-family: 'Cabin', sans-serif;
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #8f8f8f;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+</style>
+
+<div class="error-pag text-center"
+    style="height: 70vh;display: flex;align-content: center;justify-content: center;align-items: center;flex-direction: column;">
+    <img src="{{ '/assets/images/ravan_cam.webp' | relative_url }}"
+        style="width: 400px; height: 300px; top:30%; left: 50%; position: absolute; transform: translate(-160%, -13%);"
+        alt="ravan_not_found">
+    <h1 class="display-1 text-danger" style="font-size: 175px;font-weight: bold;">404</h1>
+    <h2 style="font-family: 'Cabin', sans-serif; letter-spacing: 7px; font-size: 33px; font-weight: 700;">PAGE NOT FOUND</h2>
+    <span class="mt-3">
+        <a class="btn btn-warning" href="{{site.url}}">
+            <i class="fas fa-reply-all"></i>  Back to 
+            <strong>Home page</strong>
+        </a>
+    </span>
+</div>

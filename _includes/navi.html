@@ -1,0 +1,60 @@
+  <nav id="hidenav" class="navbar sticky-top navbar-expand-lg navbar-light shadow-sm bg-white sticky-lg-top">
+    <div class="container-fluid align-item-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.baseurl }}/" style="margin-right: 10%;text-align: center;">
+        <span style="font-family: 'Frijole', cursive;font-size: 14px;">Junk</span>
+        <span style="color: #FF8800;font-family: 'Plaster', cursive; font-size: 24px;">BOX</span>
+      </a>
+      <div class="collapse navbar-collapse flex-lg-row justify-content-end" id="navbarTogglerDemo03">
+        {% if page.url contains "docs" %}
+          {% if site.search_enabled != false %}
+          <div class="searchbar bacc">
+            <div class="search-input-wrap">
+              <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+              <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+            </div>
+            <div id="search-results" class="search-results"></div>
+          </div>
+          {% endif %}
+       {% else %}
+       <!-- <form id="search-container" class="form-inline flex-sm-fill my-2 my-lg-0 p-2">
+        <input id="search-input" class="form-control flex-sm-fill" type="text" placeholder="Search" oninput="statefunc()" onfocusout="kill()" aria-label="Search" style="height: 48px;border-radius: 4px;">
+        <div id="blog-search-result" onmouseleave="blurFunction()">
+          <ul id="search-results-list"></ul>
+        </div>
+      </form> -->
+      <div class="blog-wrapper">
+        <div id="blog-search-input" class="blog-search-input">
+          <input id="search-input" type="text" placeholder="Type to search.." style="font-family: system-ui;font-size: 14px;">
+          <div id="blog-searchresult" class="autocom-box">
+     
+          </div>
+          <div class="blog-search-icon"><i class="fas fa-search"></i></div>
+        </div>
+      </div>
+        <!-- <form id="search-container">
+          <input id="search-input" class="blog-search" type="search" placeholder="search..."oninput="statefunc()" onfocusout="kill()">
+          <div id="blog-search-result" onmouseleave="blurFunction()">
+            <ul id="search-results-list"></ul>
+          </div>
+        </form> -->
+      {% endif %}
+      <ul class="nav nav-high nav-fill flex-row flex-lg-row mt-lg-0 shadow-none">
+            <li class="p-1 nav-item">
+              <a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active nav-link p-2"{% endif %} class="p-2 nav-link">Home</a>
+            </li>
+            <li class="p-1 nav-item">
+              <a href="{{ site.baseurl }}/blog" {% if page.url == "/blog" %}class="active nav-link p-2"{% endif %} class="nav-link p-2">Blog</a>
+            </li>
+            <li class="p-1 nav-item">
+            <a href="{{ site.baseurl }}/docs" {% if page.url == "/docs" %}class="active nav-link p-2"{% endif %} class="p-2 nav-link">Docs</a>
+            </li>
+            <li class="p-1 nav-item">
+            <a href="{{ site.baseurl }}/forensic" {% if page.url == "/forensic" %}class="active nav-link p-2"{% endif %} class="nav-link p-2">Forensic</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
