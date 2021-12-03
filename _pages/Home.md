@@ -3,8 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: original
-permalink: /blog
-stitle: wHome
 ---
 # Event
 Skip to content
