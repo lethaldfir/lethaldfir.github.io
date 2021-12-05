@@ -3,67 +3,57 @@ layout: original
 ---
 
 <div style="background-color: #fafafa;">
-  {% include  breadcrumbs.html %}
-  <!-- <a class="btn btn-white" onclick="window.history.back()"style="word-spacing:16px; position: sticky;top: 16%;left: 4%;">
-    <i class="fas fa-long-arrow-alt-left"></i>  Back
-  </a> -->
+  {% include breadcrumbs.html %}
+  <a id="backmachine" class="btn btn-white" onclick="window.history.back()"style="display:none;word-spacing:16px; position: sticky;top: 24%;left: 6%;">
+    <i class="fas fa-long-arrow-alt-left"></i>
+    <span>Back</span>
+  </a>
   <article class="blog-page">
-  <h1 class="text-center display-4 p-5" style="font-family: 'Alfa Slab One', cursive;">{{page.title}}</h1>
-<div class="container post_meta">
-  <Span class="meta-date">{{ page.date | date_to_string }} </Span>
-  <Span class="meta-by"><strong> {{ page.author }} </strong></Span>
-  <!-- {% capture time %}{{ content | reading_time }}{% endcapture %} -->
-  <Span class="meta-time text-lowercase"><i class="fas fa-clock"></i>
-     <!-- {{ time }} {% if time == '1' %}min{% else %}mins{% endif %}  -->
-     {% assign words = content | number_of_words %}
-     {% if words < 360 %}
-       1 min
-     {% else %}
-       {{ words | divided_by:180 }} mins
-     {% endif %}    </Span>
-
-  <!-- <Smeta-pan></Span> -->
-</div>
-<div class="share-box">
-  {% include  share.html %}
-</div>
-  <div class="border-0 blog-contents p-5 mb-3" style="line-height: 2;font-size: 18px;font-family: 'Sora';">
-    <!-- {% if page.toc %}
-    <div class="toc mt-4 mb-4 lead">
-      <h3 class="font-weight-bold">Table of Contents</h3>
-        {% include toc.html html=content %} 
+    <h1 class="text-center display-4 p-5" style="font-family: 'Alfa Slab One', cursive;">{{page.title}}</h1>
+    <div class="container post_meta">
+      <Span class="meta-date">{{ page.date | date_to_string }} </Span>
+      <Span class="meta-by"><strong> {{ page.author }} </strong></Span>
+      <!-- {% capture time %}{{ content | reading_time }}{% endcapture %} -->
+      <Span class="meta-time text-lowercase"><i class="fas fa-clock"></i>
+        <!-- {{ time }} {% if time == '1' %}min{% else %}mins{% endif %}  -->
+        {% assign words = content | number_of_words %}
+        {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} </Span>
     </div>
-    {% endif %} -->
-    {{ content }}
-    <div class="d-block text-center bot-share">
-      <br>
-  {% include  share.html %}
+    <div class="share-box">
+      {% include share.html %}
+    </div>
+    <div class="border-0 blog-contents p-5 mb-3" style="line-height: 2;font-size: 18px;font-family: 'Sora';">
+      {{ content }}
+      <div class="d-block text-center bot-share">
+        <br>
+        {% include share.html %}
+      </div>
+    </div>
+    </article>
 </div>
-  </div>
-  </div>
-  <div class="post-nav mb-3">
-    {% if page.next.url %}
-    <a href="{{page.next.url | relative_url }}"class="next mb-5">
-      {{page.next.title}} 
-      <br>
-      <span class="desk">
-        <i class="fas fa-long-arrow-alt-left"></i> Previous
-      </span>
-    </a>
-    {% endif %}
-      {% if page.previous.url %}
-      
-      <a href="{{page.previous.url | relative_url }}" class="previous mb-5">
-        </i> {{page.previous.title}}
-        <br><span class="desk">
-          Next <i class="fas fa-long-arrow-alt-right"></i>
-        </span>
-            </a>
-      {% endif %}
+<div class="post-nav mb-3">
+  {% if page.next.url %}
+  <a href="{{page.next.url | relative_url }}" class="next mb-5">
+    {{page.next.title}}
+    <br>
+    <span class="desk">
+      <i class="fas fa-long-arrow-alt-left"></i> Previous
+    </span>
+  </a>
+  {% endif %}
+  {% if page.previous.url %}
 
-  </div>
+  <a href="{{page.previous.url | relative_url }}" class="previous mb-5">
+    </i> {{page.previous.title}}
+    <br><span class="desk">
+      Next <i class="fas fa-long-arrow-alt-right"></i>
+    </span>
+  </a>
+  {% endif %}
+
+</div>
 
 {% include related-posts.html %}
 <footer class="main footer-16371 bg-light" style="position: sticky;left: 0;top: 0;">
-{% include foot.html %}
+  {% include foot.html %}
 </footer>

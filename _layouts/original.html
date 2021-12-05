@@ -65,6 +65,18 @@ layout: table_wrappers
 </script>
 
 <script>
+  var mybutton = document.getElementById("backmachine");
+  window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
+    mybutton.style.display = "";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+</script>
+
+<script>
   var btn = $('#button');
   $(window).scroll(function() {
     if ($(window).scrollTop() > 300) {

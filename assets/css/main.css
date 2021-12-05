@@ -87,6 +87,21 @@
     -webkit-transform: rotate(360deg);
   }
 }
+/* logo */
+.logo{
+  color: #644bff;
+  font-size: 20px;
+  font-weight: 520;
+}
+.second{
+  background-color: #644bff;
+  color: #fff;
+padding: 4px;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 6px;
+}
+
 /* preloader */
 .nav-high li a{
   display: inline-block;
@@ -952,8 +967,12 @@ color: #323247;
 
 /* end long post card */
 
-/* pagination */
+/* back button */
+#backmachine span:hover{
+  text-decoration: underline!important;
 
+}
+/* pagination */
 .pagination a, .pagination span {
 font-family: system-ui;
   padding: 7px 18px;
@@ -1022,7 +1041,7 @@ font-family: system-ui;
   /* border: 1px solid black; */
   position: fixed;
   top: 40%;
-  left: 30px;
+  left: 8%;
   padding: 5px;
 }
 .share-box a {

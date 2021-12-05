@@ -3,9 +3,8 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="{{ site.baseurl }}/" style="margin-right: 10%;text-align: center;">
-        <span style="font-family: 'Frijole', cursive;font-size: 14px;">Junk</span>
-        <span style="color: #FF8800;font-family: 'Plaster', cursive; font-size: 24px;">BOX</span>
+      <a class="navbar-brand" href="{{ site.url }}" style="margin-left: 32px;opacity: 0.82;">
+        {% include logo.html %}
       </a>
       <div class="collapse navbar-collapse flex-lg-row justify-content-end" id="navbarTogglerDemo03">
         {% if page.url contains "docs" %}
