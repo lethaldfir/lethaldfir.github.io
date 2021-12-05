@@ -1144,6 +1144,7 @@ font-family: system-ui;
     transition: none;
     display: block;
  }
+}
 @media (max-width: 768px) {
  .blog-wrapper{
    width: 100%;
@@ -1281,8 +1282,6 @@ font-family: system-ui;
 .searchbar{
     left: auto;
   }
-  
-
   /* .blog-search-results{
     width: 75%;
     left: auto;
@@ -1341,6 +1340,7 @@ font-family: system-ui;
      padding-bottom: 0px!important;
   }
 }
+
 @media (max-width: 576px) {
   .postcard{
      width: 90%!important;
