@@ -1210,9 +1210,7 @@ font-family: system-ui;
 }
 }
 @media (max-width: 1200px) {
-  .scroll-nav{ /*width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});*/
-   display:none;
-  }
+
   .share-box{
     display: none;
   }
@@ -1255,6 +1253,11 @@ font-family: system-ui;
      max-width: 100%;
    }
 } */
+@media (max-width: 1280px){
+  .scroll-nav{ /*width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});*/
+   display:none;
+  }
+}
 @media (max-width: 768px) {
   /* .blog-page{
     width: 100%;
