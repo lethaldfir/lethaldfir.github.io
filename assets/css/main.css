@@ -103,6 +103,38 @@ border-radius: 6px;
 }
 
 /* preloader */
+
+/* list grid layout */
+.lay{
+  display: flex;
+  justify-content: end;
+  padding: 8px;
+}
+
+.lay .se{
+  padding: 8px;
+  color: #c9c9c9;
+  font-size: 20px;
+}
+.lay i:hover{
+  cursor: pointer;
+  color: #8f8f8f;
+  border-radius: 4px;
+  transition-duration: 500ms;
+}
+.lay i.active{
+  border: 1px solid black;
+  border-radius: 4px;
+  color: #8f8f8f;
+}
+.listss{
+  width: 100%;
+}
+.grids{
+  width: 25%;
+}
+
+/* end of layout and gridss */
 .nav-high li a{
   display: inline-block;
   margin-right: 10px;
@@ -1226,9 +1258,7 @@ font-family: system-ui;
    margin-right: auto!important;
    margin-left: auto!important;
   }
-  .postcard{
-     width: 94%!important;
-  } 
+
    }
 /* blog page */
 /* @media (min-width: 992px) {
@@ -1292,6 +1322,12 @@ font-family: system-ui;
 .searchbar{
     left: auto;
   }
+  .lay{
+    display: none;
+  }
+  .postcard{
+    width: 100%!important;
+ } 
   /* .blog-search-results{
     width: 75%;
     left: auto;
@@ -1310,6 +1346,7 @@ font-family: system-ui;
   .searchbar{
     left: auto;
   }
+
   /* .blog-search-results{
     width: 75%;
     left: auto;
@@ -1354,5 +1391,11 @@ font-family: system-ui;
 @media (max-width: 576px) {
   .postcard{
      width: 90%!important;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px){
+  .grids{
+    width: 28%;
   }
 }

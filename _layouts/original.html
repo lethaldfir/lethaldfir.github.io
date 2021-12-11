@@ -7,40 +7,55 @@ layout: table_wrappers
 {% include head_custom.html %}
 
 <body onload="loadfunc()">
-<!-- <div id="loading">.....</div> -->
-<div id="loading" class="preloader-whirlpool">
-  <div class="whirlpool"></div>
-</div>
+  <!-- <div id="loading">.....</div> -->
+  <div id="loading" class="preloader-whirlpool">
+    <div class="whirlpool"></div>
+  </div>
   <a id="button"></a>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="svg-link" viewBox="0 0 24 24">
       <title>Link</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
       </svg>
     </symbol>
     <symbol id="svg-search" viewBox="0 0 24 24">
       <title>Search</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
       </svg>
     </symbol>
     <symbol id="svg-menu" viewBox="0 0 24 24">
       <title>Menu</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </symbol>
     <symbol id="svg-arrow-right" viewBox="0 0 24 24">
       <title>Expand</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-chevron-right">
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
     </symbol>
     <symbol id="svg-doc" viewBox="0 0 24 24">
       <title>Document</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
-        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+        <polyline points="13 2 13 9 20 9"></polyline>
       </svg>
     </symbol>
   </svg>
@@ -50,7 +65,8 @@ layout: table_wrappers
 
   <div id="blog-search-overlay"></div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- <script src="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
@@ -59,26 +75,48 @@ layout: table_wrappers
 <!-- <script src="{{ 'assets/js/copyCode.js' | relative_url}}"></script> -->
 <script>
   var load = document.getElementById("loading");
-  function loadfunc(){
+  function loadfunc() {
     load.style.display = 'none';
   }
 </script>
 
+<!-- toggle -->
+<script>
+  $("#clicks i").on("click", function (e) {
+    if ($(this).hasClass("li")) {
+      $("#grid").removeClass("active");
+      $(this).addClass("active");
+      $("#postcards").addClass("containse").removeClass("d-flex container justify-content-center align-items-center related flex-wrap mb-5");
+      $('#postcards .postcard').addClass("listss");
+      $('#postcards .postcard').removeClass("grids");
+    } else if ($(this).hasClass("gr")) {
+      $("#lists").removeClass("active");
+      $(this).addClass("active");
+      $("#postcards").addClass("d-flex container justify-content-center align-items-center related flex-wrap mb-5").removeClass("containse");
+      $('#postcards .postcard').addClass("grids");
+      $('#postcards .postcard').removeClass("listss");
+    }
+  });
+</script>
+
 <script>
   var mybutton = document.getElementById("backmachine");
-  window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
-    mybutton.style.display = "";
-  } else {
-    mybutton.style.display = "none";
+  if (mybutton) {
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
+        mybutton.style.display = "";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
   }
-}
+
 </script>
 
 <script>
   var btn = $('#button');
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
       btn.addClass('show');
     } else {
@@ -86,9 +124,9 @@ function scrollFunction() {
     }
   });
 
-  btn.on('click', function(e) {
+  btn.on('click', function (e) {
     e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+    $('html, body').animate({ scrollTop: 0 }, '300');
   });
 </script>
 
@@ -104,8 +142,8 @@ function scrollFunction() {
           <br><span class="text-muted text-decoration-none text-capitalize"style="font-size:12px;"> {url}</span>\
       </a>\
   </li>',
-  limit: 1000,
-  debounceTime: 10
+    limit: 1000,
+    debounceTime: 10
   })
 </script>
 <!--  <br><span style="font-size:10px;color:gray;">{date} | date_to_string</span>\ -->
@@ -113,26 +151,26 @@ function scrollFunction() {
   var searchInput = $("#search-input");
   var searchResults = $("#blog-searchresult");
 
-  $(document).click(function(e) {
-  if ($(e.target).closest('#search-input, #blog-searchresult').length == 0){
-  searchResults.hide();
-  document.querySelector(".blog-search-input").classList.remove("active");
-  document.getElementById("blog-search-overlay").classList.remove("blog-search-overlay");
-  }
-});
+  $(document).click(function (e) {
+    if ($(e.target).closest('#search-input, #blog-searchresult').length == 0) {
+      searchResults.hide();
+      document.querySelector(".blog-search-input").classList.remove("active");
+      document.getElementById("blog-search-overlay").classList.remove("blog-search-overlay");
+    }
+  });
 </script>
 <script>
   const searchWrapper = document.querySelector(".blog-search-input");
   const inputBox = searchWrapper.querySelector("#search-input");
   const suggBox = searchWrapper.querySelector(".autocom-box");
   var searchResults = $("#blog-searchresult");
-  inputBox.onkeyup = (e)=>{
+  inputBox.onkeyup = (e) => {
     let userData = e.target.value;
     if (userData) {
       searchResults.show();
       document.querySelector(".blog-search-input").classList.add("active");
       document.getElementById("blog-search-overlay").classList.add("blog-search-overlay");
-      
+
     } else {
       document.querySelector(".blog-search-input").classList.remove("active");
       document.getElementById("blog-search-overlay").classList.remove("blog-search-overlay");
@@ -142,10 +180,10 @@ function scrollFunction() {
 
 
 <script>
-function catogeryselekt() {
-      var x = document.getElementById("catogeryselect").value;
-      window.location.href = `{{site.baseurl}}/categories#` + x;
-}
+  function catogeryselekt() {
+    var x = document.getElementById("catogeryselect").value;
+    window.location.href = `{{site.baseurl}}/categories#` + x;
+  }
 </script>
 
 <script>
@@ -160,41 +198,41 @@ function catogeryselekt() {
     a.setAttribute("id", "selectselected");
     a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
     x[i].appendChild(a);
-  console.log(a.innerText);
+    console.log(a.innerText);
     b = document.createElement("DIV");
     b.setAttribute("class", "select-items select-hide");
     for (j = 1; j < ll; j++) {
       c = document.createElement("DIV");
       c.innerHTML = selElmnt.options[j].innerHTML;
-      c.addEventListener("click", function(e) {
-          var y, i, k, s, h, sl, yl;
-          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-          sl = s.length;
-          h = this.parentNode.previousSibling;
-          for (i = 0; i < sl; i++) {
-            if (s.options[i].innerHTML == this.innerHTML) {
-              s.selectedIndex = i;
-              h.innerHTML = this.innerHTML;
-              y = this.parentNode.getElementsByClassName("same-as-selected");
-              yl = y.length;
-              for (k = 0; k < yl; k++) {
-                y[k].removeAttribute("class");
-              }
-              this.setAttribute("class", "same-as-selected");
-              break;
+      c.addEventListener("click", function (e) {
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
             }
+            this.setAttribute("class", "same-as-selected");
+            break;
           }
-          h.click();
+        }
+        h.click();
       });
       b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function(e) {
-        e.stopPropagation();
-        closeAllSelect(this);
-        this.nextSibling.classList.toggle("select-hide");
-        this.classList.toggle("select-arrow-active");
-      });
+    a.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
   }
   function closeAllSelect(elmnt) {
     var x, y, i, xl, yl, arrNo = [];
@@ -219,8 +257,8 @@ function catogeryselekt() {
   }
   document.addEventListener("click", closeAllSelect);
 
-  </script>
-  <!-- <script>
+</script>
+<!-- <script>
 document.getElementById("selectselected").addEventListener("change",funsel());
 
 function funsel() {

@@ -33,7 +33,8 @@
     {% assign minCommonTags = 1 %}
     {% assign maxRelatedCounter = 0 %}
     <!-- <div class="blog-grid-container"> -->
-    {% for post in site.posts %}
+        <div class="d-flex container justify-content-center align-items-center related flex-wrap mb-5">
+            {% for post in site.posts %}
 
         {% assign sameTagCount = 0 %}
         {% assign commonTags = '' %}
@@ -49,9 +50,7 @@
         {% endfor %}
 
         {% if sameTagCount >= minCommonTags %}
-        <div class="d-flex container justify-content-center align-items-center related flex-wrap mb-5">
             {% include longcard.html content="25%" %}
-        </div>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             {% if maxRelatedCounter >= maxRelated %}
                 {% break %}
@@ -59,7 +58,8 @@
         {% endif %}
 
         {% endfor %}
-        {% assign sortedCategories = page.categories | sort %}
+    </div>
+    {% assign sortedCategories = page.categories | sort %}
         {% assign leastcatcount = 1 %}
         {% assign cattotal = sortedCategories | size %}
         {% if leastcatcount >= cattotal %}
