@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="iconLeft">
+ <!---->
+ <defs>
+  <!---->
+ </defs>
+ <defs>
+  <!---->
+ </defs>
+ <defs>
+  <!---->
+ </defs>
+ <!---->
+ <g class="layer">
+  <title>Layer 1</title>
+  <circ class="logo-background-square" width="48px" height="48px" fill="#FFFFFF" id="svg_1" x="0" y="0"/>
+  <g fill="#141516" id="e112d377-fde8-4aa5-a08b-26828ff4f167" transform="matrix(1.12363 0 0 1.12363 40 132.022)">
+   <path d="m-19.598906,-83.696461c8.837,0 16,-7.163 16,-16s-7.163,-16 -16,-16s-16,7.163 -16,16s7.163,16 16,16zm-1.183,-25.579l2,0l0,8.886l8.887,0l0,2l-10.887,0l0,-10.886zm-5.959,0.437l2,0l0,14.283l14.283,0l0,2l-16.283,0l0,-16.283z" id="svg_3"/>
+  </g>
+ </g>
+</svg>
