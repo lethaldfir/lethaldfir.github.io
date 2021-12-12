@@ -123,7 +123,7 @@ border-radius: 6px;
   transition-duration: 500ms;
 }
 .lay i.active{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 4px;
   color: #8f8f8f;
 }
@@ -997,6 +997,11 @@ color: #323247;
   position: relative;
 }
 
+#postcards > div.postcard.grids  > div.postcard-header.header-inline > div.postcard-title > h2{
+  height: 120px;
+  overflow: hidden;
+}
+
 /* end long post card */
 
 /* back button */
@@ -1397,5 +1402,9 @@ font-family: system-ui;
 @media screen and (max-width: 1200px) and (min-width: 992px){
   .grids{
     width: 28%;
+  }
+  .postcard-title .ca-title{
+    height: 120px;
+    overflow: hidden;
   }
 }
