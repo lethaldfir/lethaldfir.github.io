@@ -124,8 +124,8 @@ border-radius: 6px;
 }
 .lay i.active{
   /* border: 1px solid black; */
-  border-radius: 4px;
-  color: #8f8f8f;
+  /* border-radius: 4px; */
+  color: #3b3b3b;
 }
 .listss{
   width: 100%;

@@ -34,29 +34,25 @@
     {% assign maxRelatedCounter = 0 %}
     <!-- <div class="blog-grid-container"> -->
         <div class="d-flex container justify-content-center align-items-center related flex-wrap mb-5">
-            {% for post in site.posts %}
-
-        {% assign sameTagCount = 0 %}
-        {% assign commonTags = '' %}
-
-        {% for category in post.categories %}
-            {% if post.url != page.url %}
-                {% if page.categories contains category %}
-                    {% assign sameTagCount = sameTagCount | plus: 1 %}
-                    {% capture tagmarkup %} {{ category }} {% endcapture %}
-                    {% assign commonTags = commonTags | append: tagmarkup %}
+        {% for post in site.posts %}
+            {% assign sameTagCount = 0 %}
+            {% assign commonTags = '' %}
+            {% for category in post.categories %}
+                {% if post.url != page.url %}
+                    {% if page.categories contains category %}
+                        {% assign sameTagCount = sameTagCount | plus: 1 %}
+                        {% capture tagmarkup %} {{ category }} {% endcapture %}
+                        {% assign commonTags = commonTags | append: tagmarkup %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% if sameTagCount >= minCommonTags %}
+                {% include longcard.html content="25%" %}
+                {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                {% if maxRelatedCounter >= maxRelated %}
+                    {% break %}
                 {% endif %}
             {% endif %}
-        {% endfor %}
-
-        {% if sameTagCount >= minCommonTags %}
-            {% include longcard.html content="25%" %}
-            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-            {% if maxRelatedCounter >= maxRelated %}
-                {% break %}
-            {% endif %}
-        {% endif %}
-
         {% endfor %}
     </div>
     {% assign sortedCategories = page.categories | sort %}

@@ -66,8 +66,8 @@ layout: table_wrappers
   <div id="blog-search-overlay"></div>
   <footer class="main footer-16371 bg-light" style="position: sticky;left: 0;top: 0;">
     {% include foot.html %}
-    </footer>
-    
+  </footer>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
@@ -105,7 +105,8 @@ layout: table_wrappers
 
 <script>
   var mybutton = document.getElementById("backmachine");
-  if (mybutton) {
+
+  if (mybutton || sharebox) {
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
       if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
@@ -117,7 +118,15 @@ layout: table_wrappers
   }
 
 </script>
-
+<script>
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() >= $('.bot-share').offset().top + $('.bot-share').outerHeight() - window.innerHeight) {
+      $('#sharelink').css({ 'display': 'none' });
+    } else {
+      $('#sharelink').css({ 'display': '' });
+    }
+  });
+</script>
 <script>
   var btn = $('#button');
   $(window).scroll(function () {
