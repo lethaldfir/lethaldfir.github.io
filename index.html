@@ -2,11 +2,16 @@
 layout: original
 subtitle: Blog
 ---
-<div class="mt-5 containse">
+<div id="clicks" class="mt-3 lay container">
+  <i id="lists" class="fas fa-list li se active"></i>
+  <i id="grid" class="fas fa-th-large gr se"></i>
+</div>
+
+<div id="postcards" class="containse">
     <!-- <div class="d-flex container justify-content-center align-items-center flex-wrap mt-5"> -->
 
     {% for post in paginator.posts %}
-        {% include longcard.html content="100%" %}
+        {% include longcard.html %}
     {% endfor %}
 <!-- <p>{{paginator.total_pages}} | {{paginator.total_posts}} | {{paginator.per_page}}  </p> -->
 <!-- pagination -->
@@ -38,7 +43,3 @@ subtitle: Blog
 {% endif %}
 </div>
 
-<footer class="main footer-16371 bg-light" style="position: sticky;left: 0;top: 0;">
-  {% include foot.html %}
-  </footer>
-  

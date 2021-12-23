@@ -19,7 +19,7 @@ layout: original
         {% assign words = content | number_of_words %}
         {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} </Span>
     </div>
-    <div class="share-box">
+    <div id="sharelink" class="share-box" style="display: none;">
       {% include share.html %}
     </div>
     <div class="border-0 blog-contents p-5 mb-3" style="line-height: 2;font-size: 18px;font-family: 'Sora';">
@@ -54,6 +54,3 @@ layout: original
 </div>
 
 {% include related-posts.html %}
-<footer class="main footer-16371 bg-light" style="position: sticky;left: 0;top: 0;">
-  {% include foot.html %}
-</footer>
