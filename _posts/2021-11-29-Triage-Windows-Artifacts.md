@@ -11,6 +11,8 @@ excerpt: Triage helps For every forensic analysis, we need to answer the followi
 ## Forensic Triage Past Present Furture
 
 <br>
+Triage helps For every forensic analysis, we need to answer the following questions for successful incident remediation and recovery, failed to identify key data points such as initial access and level of compromise will result in repeated security indents.
+<br>
 
 
 <div class="border-0" markdown="1">

@@ -1,5 +1,21 @@
 <div class="postcard listss" style="width: {{ include.content }};">
     <a class="blog-link" href="{{ site.baseurl }}{{ post.url }}"></a>
+    <div class="tags">
+        {% assign sortedCategories = post.categories | sort %}
+        {% for category in sortedCategories %}
+            {% assign min = 0 %}
+            {% assign max = 400 %}
+            {% assign diff = max | minus: min %}
+            {% assign random = "now" | date: "%N" | modulo: diff | plus: min %}
+            {% assign colors = 'info|warning|secondary|success' | split: '|' %}
+            {% assign randval = random | slice:0 | to_integer %}
+            <span class="badge bg-{{ colors[randval] }} bg-opacity-25 text-dark">
+                <a class="text-dark text-decoration-none"
+                    style="margin-top: 5px;" href="{{site.baseurl}}/categories#{{ category | replace: " "," -" }}">{{
+                    category }}</a>
+                    </span>
+        {% endfor %}
+    </div>
     <div class="postcard-header header-inline">
         {% assign author = site.data.authors[post.author] %}
         <div class="postcard-img">
@@ -16,12 +32,16 @@
             {%endif%}
         </div>
         <div class="postcard-title">
-            
-    {% assign postdate = post.date | date_to_string %}
-    {% assign year = postdate | split: ' ' %}
-            <h2 class="ca-title">{{ post.title }}</h2>
+            {% assign postdate = post.date | date_to_string %}
+            {% assign year = postdate | split: ' ' %}
+            <h2 class="ca-title">
+                <a class="title-link" href="{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }}
+                </a>
+            </h2>
             <p class="dates">{{ year[1] }} {{ year[0] }}, {{ year[2] }}</p>
         </div>
+
     </div>
     <!-- <div class="tags">
         <span class="tag-item">#some</span>
@@ -37,7 +57,38 @@
     </div>
     <div class="card-foot">
         <span class="foot-link">
-            Read more →
+            <a class="animated-arrow text-decoration-none text-dark" href="{{ site.baseurl }}{{ post.url }}">
+                <span class='the-arrow -left'>
+                    <span class='shaft'></span>
+                  </span>
+                  <span class='main'>
+                    <span class='text'>
+                      Read More
+                    </span>
+                    <span class='the-arrow -right'>
+                      <span class='shaft'></span>
+                    </span>
+                  </span>
+            </a>
         </span>
+        <button class="btn" onclick="showshares('{{post.title}}')">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <span id="{{post.title}}" class="title-share"style="display: none;">
+            {% include share.html content=post.url %}
+        </span>
+
     </div>
 </div>
+<script>
+    function showshares(posttitle) {
+  var x = document.getElementById(posttitle);
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+    x.classList.add('active')
+  } else {
+    x.style.display = "none";
+    x.classList.remove('active')
+  }
+}
+</script>
