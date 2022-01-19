@@ -274,6 +274,20 @@ layout: table_wrappers
   document.addEventListener("click", closeAllSelect);
 
 </script>
+<script>
+  var scrollelem = document.getElementById("scrollindicbar");
+  if (typeof(scrollelem) != 'undefined' && scrollelem != null){
+
+    window.onscroll = function() {scrollindicator()};
+    
+  function scrollindicator() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    scrollelem.style.width = scrolled + "%";
+  }
+}
+  </script>
 <!-- <script>
 document.getElementById("selectselected").addEventListener("change",funsel());
 

@@ -6,7 +6,10 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
-<body>
+<body onload="loadfunc()">
+  <div id="loading" class="preloader-whirlpool">
+    <div class="whirlpool"></div>
+  </div>
   <a id="button"></a>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="svg-link" viewBox="0 0 24 24">
@@ -204,6 +207,12 @@ layout: table_wrappers
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  var load = document.getElementById("loading");
+  function loadfunc() {
+    load.style.display = 'none';
+  }
+</script>
 <!-- <script>
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {

@@ -694,6 +694,23 @@ thead th {
 
 /* end of footer */
 
+/* scroll indicator */
+
+.scrollindic-container {
+  position: fixed;
+  width: 100%;
+  height: 4px;
+  z-index: 9999;
+  /* background: blue; */
+}
+
+.scrollindic-bar {
+  height: 4px;
+  background: #8f7eff;
+  width: 0%;
+}
+
+/* end of scroll indicator */
 /* blog page search 
 
 .blog-search-results {
