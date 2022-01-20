@@ -1115,9 +1115,10 @@ animation: slide 1s forwards;
 /* end long post card */
 
 /* back button */
-#backmachine span:hover{
-  text-decoration: underline!important;
-
+#backmachine:hover{
+  font-size: 18px;
+  font-weight: bold;
+  color: #644bff;
 }
 /* pagination */
 .pagination a, .pagination span {

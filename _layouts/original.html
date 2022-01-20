@@ -83,7 +83,18 @@ layout: table_wrappers
     load.style.display = 'none';
   }
 </script>
-
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+<script>
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+</script>
 <!-- toggle -->
 <script>
   $("#clicks i").on("click", function (e) {
@@ -104,18 +115,14 @@ layout: table_wrappers
 </script>
 
 <script>
-  var mybutton = document.getElementById("backmachine");
 
-  if (mybutton) {
-    window.onscroll = function () { scrollFunction() };
-    function scrollFunction() {
-      if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
-        mybutton.style.display = "";
-      } else {
-        mybutton.style.display = "none";
-      }
+  $(window).on('scroll',function () {
+    if ($(window).scrollTop() > 300) {
+      $('#backmachine').css({'display': ''});
+    } else {
+      $('#backmachine').css({'display': 'none'});
     }
-  }
+  });
 
 </script>
 <script>

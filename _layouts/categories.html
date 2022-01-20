@@ -6,8 +6,11 @@ permalink: "/categories.html"
 <style>
     /*the container must be positioned relative:*/
     .custom-select {
-      position: relative;
-      font-family: Arial;
+      /* position: relative; */
+      font-family: inherit;
+      top: 16%;
+      left: 24px;
+      border-radius: 4px;
     }
     
     .custom-select select {
@@ -15,14 +18,14 @@ permalink: "/categories.html"
     }
     
     .select-selected {
-      background-color: DodgerBlue;
+      background-color: #644bff;
     }
     
     /*style the arrow inside the select element:*/
     .select-selected:after {
       position: absolute;
       content: "";
-      top: 14px;
+      top: 16px;
       right: 10px;
       width: 0;
       height: 0;
@@ -49,7 +52,7 @@ permalink: "/categories.html"
     /*style items (options):*/
     .select-items {
       position: absolute;
-      background-color: DodgerBlue;
+      background-color: #644bff;
       top: 100%;
       left: 0;
       right: 0;
@@ -67,7 +70,7 @@ permalink: "/categories.html"
     </style>
     <div class="custom-select" style="position: fixed;z-index: 1010;width:200px;">
 <select id="catogeryselect">
-    <option value="">catogery</option>
+    <option value="">Catogery</option>
     {% for category in site.categories %}
         <option value="{{category[0]}}">{{category[0]}}</option>
     {% endfor %}
