@@ -90,7 +90,7 @@
 /* logo */
 .logo{
   color: #644bff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 520;
 }
 .second{
@@ -142,11 +142,12 @@ border-radius: 6px;
   /* font-weight: 700; */
   text-align: center;
   font-size: 1em;
-  font-family: 'Sora', sans-serif;}  
+  font-family: 'Sora', sans-serif;
+}  
 .nav-high li a:hover {
   font-weight: 800;
   color:#7253ed;
-  background-color: rgb(240, 240, 240);
+  /* background-color: rgb(240, 240, 240); */
   border-radius: 3px;
 }
 .nav-high li a.active{
@@ -441,31 +442,32 @@ thead th {
 }
 
 .blog-wrapper{
-  max-width: 450px;
+  max-width: 420px;
   width: 36%;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   margin: auto;
   /* z-index: 20; */
-  height: 4em;
+  height: 3em;
 }
 
 .blog-wrapper .blog-search-input{
   background: #fff;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   position: relative;
   /* box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12); */
 }
 
 .blog-search-input input{
-  height: 65px;
+  height: 48px;
   width: 100%;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 0 60px 0 20px;
   font-size: 18px;
+  background-color: #f6f6f6;
   /* box-shadow: 0px 1px 5px rgba(0,0,0,0.1); */
 }
 
@@ -489,6 +491,11 @@ thead th {
 /* end */
 .blog-search-input.active input{
   border-radius: 5px 5px 0 0;
+  background-color: #fff !important;
+}
+
+.blog-search-input.active .blog-wrapper{
+  max-width: 320px !important;
 }
 
 .blog-search-input .autocom-box{
@@ -543,15 +550,18 @@ thead th {
   position: absolute;
   right: 0px;
   top: 0px;
-  height: 65px;
-  width: 65px;
+  height: 48px;
+  width: 48px;
   text-align: center;
-  line-height: 65px;
-  font-size: 20px;
-  color: #644bff;
+  line-height: 50px;
+  font-size: 16px;
+  color: #a9a9a9;
   cursor: pointer;
 }
 
+.blog-search-input.active .blog-search-icon{
+  color: #7253ed;
+}
 .blog-search-result-item{
   color:red;
 }
@@ -906,11 +916,12 @@ thead th {
 //     border-bottom: none;
 // } */
 .postcard .blog-link{
-  position: relative;
-  top: 0;
-  bottom: 0;
+  position: absolute;
+  top: 22%;
+  bottom: 22%;
   left: 0;
   right: 0;
+  /* border: 1px solid black; */
   z-index: 1;
 }
 .postcard .title-link{
@@ -1407,7 +1418,7 @@ font-family: system-ui;
   position: relative;
   z-index: 2;
   flex-grow: 1;
-  height: 4rem;
+  height: 3rem;
   /* left: 200px; */
   transition: padding linear 200ms;
   display: flex;

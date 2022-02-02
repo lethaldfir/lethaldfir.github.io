@@ -27,6 +27,8 @@
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   transition: height linear #{$transition-duration / 2};
+  // border: 1px solid black;
+  border-radius: 8px !important;
 
   @include mq(md) {
     position: absolute;
@@ -48,7 +50,7 @@
   padding-bottom: $sp-2;
   padding-left: #{$gutter-spacing-sm + $sp-5};
   font-size: 16px;
-  background-color: $search-background-color;
+  background-color: #f6f6f6 !important;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
@@ -66,7 +68,8 @@
 
   &:focus {
     outline: 0;
-
+    // background-color: #fff !important;
+    border-radius: none !important;
     + .search-label .search-icon {
       color: $link-color;
     }
@@ -272,7 +275,7 @@
 
   .search-input-wrap {
     height: $sp-10;
-    border-radius: 0;
+    border-radius: 0 !important;
 
     @include mq(md) {
       width: $search-results-width;
@@ -281,7 +284,7 @@
   }
 
   .search-input {
-    background-color: $search-background-color;
+    background-color: $search-background-color !important;
 
     @include mq(md) {
       padding-left: 2.3rem;
