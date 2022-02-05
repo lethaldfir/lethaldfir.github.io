@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Triage of Windows Artifacts
+title: List of Windows Artifacts for Triage Analysis
 date: '2021-11-29 10:58:38'
 categories: ["Triage"]
 permalink: blog/:title/
 author: The_Croods
 excerpt: Triage helps For every forensic analysis, we need to answer the following questions for successful incident remediation and recovery, failed to identify key data points such as initial access and level of compromise will result in repeated security indents.
+
 ---
 
 ## Forensic Triage Past Present Furture
@@ -31,6 +32,30 @@ Triage helps For every forensic analysis, we need to answer the following questi
 | LNK Files | **Windows XP** <br> C:\Documents and Settings\\`<username>`\Recent <br>**Windows 7 Later** <br> C:\Users\\`<username>`\AppData\Roaming\Microsoft\Windows\Recent|
 | Scheduled Tasks | C:\Windows\tasks <br> C:\Windows\System32\tasks |
 | powershell console history |C:\Users\\`<usrname>`\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine <br>ConsoleHost_history.txt|
+| Wmi | C:\WINDOWS\system32\wbem\Repository <a href="#" class="text-decoration-none" data-html="true" data-bs-toggle="tooltip" title="Parse to get Wmi persistence & recently used apps"><i class="fas fa-info-circle"></i> </a> |
 
 </div>
+<br>
 
+## **Open source Forensic Triage Tools**
+
+Cylr
+```yaml
+https://github.com/orlikoski/CyLR
+```
+Kape
+```yaml
+https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape
+```
+Kansa
+```yaml
+https://github.com/davehull/Kansa
+```
+IR triage
+```yaml
+https://github.com/AJMartel/IRTriage
+```
+velociraptor
+```yaml
+https://github.com/Velocidex/velociraptor
+```

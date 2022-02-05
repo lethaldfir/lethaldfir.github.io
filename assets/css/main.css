@@ -471,21 +471,31 @@ thead th {
   /* box-shadow: 0px 1px 5px rgba(0,0,0,0.1); */
 }
 
+/* horizontal scroll bars */
+.highlight::-webkit-scrollbar:horizontal{
+  height: 8px;
+  background-color: red;
+}
+.highlight::-webkit-scrollbar-thumb:horizontal{
+  background: rgb(216, 216, 216);
+  /* border-radius: 10px; */
+        
+    }
 /* scrooll bar for search ressults */
 /* width */
-.autocom-box::-webkit-scrollbar, .site-nav::-webkit-scrollbar, .search-results::-webkit-scrollbar{
+.autocom-box::-webkit-scrollbar, .site-nav::-webkit-scrollbar, .search-results::-webkit-scrollbar, .highlight::-webkit-scrollbar{
   width: 8px;
 }
 /* Track */
-.autocom-box::-webkit-scrollbar-track, .site-nav::-webkit-scrollbar-track, .search-results::-webkit-scrollbar-track {
+.autocom-box::-webkit-scrollbar-track, .site-nav::-webkit-scrollbar-track, .search-results::-webkit-scrollbar-track, .highlight::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
 /* Handle */
-.autocom-box::-webkit-scrollbar-thumb, .site-nav::-webkit-scrollbar-thumb, .search-results::-webkit-scrollbar-thumb {
+.autocom-box::-webkit-scrollbar-thumb, .site-nav::-webkit-scrollbar-thumb, .search-results::-webkit-scrollbar-thumb,.highlight::-webkit-scrollbar-thumb {
   background: rgb(197, 197, 197); 
 }
 /* Handle on hover */
-.autocom-box::-webkit-scrollbar-thumb:hover, .site-nav::-webkit-scrollbar-thumb:hover,  .search-results::-webkit-scrollbar-thumb:hover{
+.autocom-box::-webkit-scrollbar-thumb:hover, .site-nav::-webkit-scrollbar-thumb:hover,  .search-results::-webkit-scrollbar-thumb:hover, .highlight::-webkit-scrollbar-thumb:hover{
   background: rgb(143, 143, 143); 
 }
 /* end */
